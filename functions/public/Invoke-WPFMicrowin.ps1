@@ -320,7 +320,7 @@ public class PowerManagement {
 		reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\ReserveManager" /v "ShippedWithReserves" /t REG_DWORD /d 0 /f
 
   		Write-Host "Enabling Rounded Corners, Acrylic and mica by default"
-        	reg add "HKLM\zSOFTWARE\Microsoft\Windows\Dwm" /v "ForceEffectMode" /t REG_DWORD /d 2 /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\Dwm" /v "ForceEffectMode" /t REG_DWORD /d 2 /f
 		
 		Write-Host "Configuring Application Compatibility...."
 		reg add "HKLM\zNTUSER\Software\Policies\Microsoft\Windows\AppCompat" /v "DisablePCA" /t REG_DWORD /d "1" /f
@@ -331,7 +331,7 @@ public class PowerManagement {
 		reg add "HKLM\zSoftware\Policies\Microsoft\Windows\AppCompat" /v "SbEnable" /t REG_DWORD /d "0" /f
 		reg add "HKLM\zSoftware\Policies\Microsoft\Windows\AppCompat" /v "VDMDisallowed" /t REG_DWORD /d "1" /f
 
-        	Write-Host "Restrict Communication for Current User...."
+        Write-Host "Restrict Communication for Current User...."
 		reg add "HKLM\zNTUSER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v "NoInternetOpenWith" /t REG_DWORD /d "1" /f
 		reg add "HKLM\zNTUSER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v "NoOnlinePrintsWizard" /t REG_DWORD /d "1" /f
 		reg add "HKLM\zNTUSER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v "NoPublishingWizard" /t REG_DWORD /d "1" /f
@@ -351,7 +351,7 @@ public class PowerManagement {
 		reg add "HKLM\zNTUSER\Software\Policies\Microsoft\WindowsMovieMaker" /v "WebHelp" /t REG_DWORD /d "1" /f
 		reg add "HKLM\zNTUSER\Software\Policies\Microsoft\WindowsMovieMaker" /v "WebPublish" /t REG_DWORD /d "1" /f
 
-                Write-Host "Restrict Communication for Local Machine...."
+        Write-Host "Restrict Communication for Local Machine...."
 		reg add "HKLM\zSoftware\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v "NoInternetOpenWith" /t REG_DWORD /d "1" /f
 		reg add "HKLM\zSoftware\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v "NoOnlinePrintsWizard" /t REG_DWORD /d "1" /f
 		reg add "HKLM\zSoftware\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v "NoPublishingWizard" /t REG_DWORD /d "1" /f
@@ -379,158 +379,158 @@ public class PowerManagement {
 		reg add "HKLM\zSoftware\Policies\Microsoft\WindowsMovieMaker" /v "WebHelp" /t REG_DWORD /d "1" /f
 		reg add "HKLM\zSoftware\Policies\Microsoft\WindowsMovieMaker" /v "WebPublish" /t REG_DWORD /d "1" /f
 
-                Write-Host "Configuring Diagnostics\DiagTrack...."
-                reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack" /v "TimeStampInterval" /t REG_DWORD /d 0 /f
-                reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack" /v "LastKnownProcessorModeStateIsController" /t REG_DWORD /d 0 /f
-                reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack" /v "DiagTrackStatus" /t REG_DWORD /d 0 /f
-                reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack" /v "Capabilities" /t REG_BINARY /d 0 /f
-                reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack" /v "DiagTrackAuthorization" /t REG_DWORD /d 0 /f
-                reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack" /v "LaunchCount" /t REG_BINARY /d 0 /f
-                reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack" /v "LastFreeNetworkLossTime" /t REG_BINARY /d 0 /f
-                reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack" /v "LastConnectivityHeartBeatTime" /t REG_BINARY /d 0 /f
-                reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack" /v "LastConnectivityState" /t REG_DWORD /d 0 /f
-                reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack" /v "ConnectivityNoNetworkTime" /t REG_DWORD /d 1 /f
-                reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack" /v "ConnectivityRestrictedNetworkTime" /t REG_DWORD /d 0 /f
-                reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack" /v "LastPersistedEventTime" /t REG_BINARY /d 0 /f
-                reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack" /v "LatencyDataLastUploadTime" /t REG_BINARY /d 0 /f
-                reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack" /v "TriggerCount" /t REG_BINARY /d 0 /f
-                reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack" /v "HttpRequestCount" /t REG_BINARY /d 0 /f
-                reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack" /v "TriggerLatency" /t REG_SZ /d "" /f
-                reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack" /v "HttpRequestLatency" /t REG_SZ /d "" /f
-                reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack" /v "LastSuccessfulUploadTime" /t REG_BINARY /d 0 /f
-                reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack" /v "LastSuccessfulRealtimeUploadTime" /t REG_BINARY /d 0 /f
-                reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack" /v "LastSuccessfulNormalUploadTime" /t REG_BINARY /d 0 /f
-                reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack" /v "LastSuccessfulCostDeferredUploadTime" /t REG_BINARY /d 0 /f
-                reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack" /v "UploadEtlFileConsent" /t REG_DWORD /d 0 /f
+        Write-Host "Configuring Diagnostics\DiagTrack...."
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack" /v "TimeStampInterval" /t REG_DWORD /d 0 /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack" /v "LastKnownProcessorModeStateIsController" /t REG_DWORD /d 0 /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack" /v "DiagTrackStatus" /t REG_DWORD /d 0 /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack" /v "Capabilities" /t REG_BINARY /d 0 /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack" /v "DiagTrackAuthorization" /t REG_DWORD /d 0 /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack" /v "LaunchCount" /t REG_BINARY /d 0 /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack" /v "LastFreeNetworkLossTime" /t REG_BINARY /d 0 /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack" /v "LastConnectivityHeartBeatTime" /t REG_BINARY /d 0 /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack" /v "LastConnectivityState" /t REG_DWORD /d 0 /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack" /v "ConnectivityNoNetworkTime" /t REG_DWORD /d 1 /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack" /v "ConnectivityRestrictedNetworkTime" /t REG_DWORD /d 0 /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack" /v "LastPersistedEventTime" /t REG_BINARY /d 0 /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack" /v "LatencyDataLastUploadTime" /t REG_BINARY /d 0 /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack" /v "TriggerCount" /t REG_BINARY /d 0 /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack" /v "HttpRequestCount" /t REG_BINARY /d 0 /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack" /v "TriggerLatency" /t REG_SZ /d "" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack" /v "HttpRequestLatency" /t REG_SZ /d "" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack" /v "LastSuccessfulUploadTime" /t REG_BINARY /d 0 /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack" /v "LastSuccessfulRealtimeUploadTime" /t REG_BINARY /d 0 /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack" /v "LastSuccessfulNormalUploadTime" /t REG_BINARY /d 0 /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack" /v "LastSuccessfulCostDeferredUploadTime" /t REG_BINARY /d 0 /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack" /v "UploadEtlFileConsent" /t REG_DWORD /d 0 /f
 
-                Write-Host "Configuring Diagnostics DiagTrack\Aggregation...."
-                reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation" /v "LastRemoteProcessPid" /t REG_DWORD /d "0" /f
-                reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation" /v "LastRemoteProcessEpoch" /t REG_DWORD /d "0" /f
-                reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation" /v "LastSettingsFiles" /t REG_SZ /d "0" /f
+        Write-Host "Configuring Diagnostics DiagTrack\Aggregation...."
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation" /v "LastRemoteProcessPid" /t REG_DWORD /d "0" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation" /v "LastRemoteProcessEpoch" /t REG_DWORD /d "0" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation" /v "LastSettingsFiles" /t REG_SZ /d "0" /f
 
-        	Write-Host "Configuring Diagnostics DiagTrack\Aggregation\ControlGroups\CodeIntegrityAggregator...."
-            	reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\CodeIntegrityAggregator\{3EB30880-CC91-5EB0-24A0-50A6A52315FC}" /v "Enabled" /t REG_DWORD /d "0" /f
-            	reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\CodeIntegrityAggregator\{3EB30880-CC91-5EB0-24A0-50A6A52315FC}" /v "MatchAnyKeyword" /t REG_BINARY /d "0" /f
+        Write-Host "Configuring Diagnostics DiagTrack\Aggregation\ControlGroups\CodeIntegrityAggregator...."
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\CodeIntegrityAggregator\{3EB30880-CC91-5EB0-24A0-50A6A52315FC}" /v "Enabled" /t REG_DWORD /d "0" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\CodeIntegrityAggregator\{3EB30880-CC91-5EB0-24A0-50A6A52315FC}" /v "MatchAnyKeyword" /t REG_BINARY /d "0" /f
 
-        	Write-Host "Configuring Diagnostics DiagTrack\Aggregation\ControlGroups\CompatAggregator...."
-            	reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\CompatAggregator\{18608E62-A628-49D9-8C02-55972E097D24}" /v "Enabled" /t REG_DWORD /d "0" /f
-            	reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\CompatAggregator\{18608E62-A628-49D9-8C02-55972E097D24}" /v "EnableHold" /t REG_DWORD /d "0" /f
-            	reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\CompatAggregator\{18608E62-A628-49D9-8C02-55972E097D24}" /v "MatchAnyKeyword" /t REG_BINARY /d "0" /f
+        Write-Host "Configuring Diagnostics DiagTrack\Aggregation\ControlGroups\CompatAggregator...."
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\CompatAggregator\{18608E62-A628-49D9-8C02-55972E097D24}" /v "Enabled" /t REG_DWORD /d "0" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\CompatAggregator\{18608E62-A628-49D9-8C02-55972E097D24}" /v "EnableHold" /t REG_DWORD /d "0" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\CompatAggregator\{18608E62-A628-49D9-8C02-55972E097D24}" /v "MatchAnyKeyword" /t REG_BINARY /d "0" /f
 
-            	Write-Host "Configuring Diagnostics DiagTrack\Aggregation\ControlGroups\MediaFoundationAggregator...."
-            	reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\MediaFoundationAggregator\{206BA7A1-88E8-4ABB-B6B8-28937E82C72B}" /v "Enabled" /t REG_DWORD /d "0" /f
-            	reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\MediaFoundationAggregator\{206BA7A1-88E8-4ABB-B6B8-28937E82C72B}" /v "EnableHold" /t REG_DWORD /d "0" /f
-            	reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\MediaFoundationAggregator\{206BA7A1-88E8-4ABB-B6B8-28937E82C72B}" /v "MatchAnyKeyword" /t REG_BINARY /d "0" /f
-            	reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\MediaFoundationAggregator\{8EFF71C4-CB3E-5664-86BF-7E15BD6F9FA4}" /v "Enabled" /t REG_DWORD /d "0" /f
-            	reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\MediaFoundationAggregator\{8EFF71C4-CB3E-5664-86BF-7E15BD6F9FA4}" /v "EnableHold" /t REG_DWORD /d "0" /f
-            	reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\MediaFoundationAggregator\{8EFF71C4-CB3E-5664-86BF-7E15BD6F9FA4}" /v "MatchAnyKeyword" /t REG_BINARY /d "0" /f
-            	reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\MediaFoundationAggregator\{9CAC2D9B-E081-4AB7-8C3E-30D117BCEF93}" /v "Enabled" /t REG_DWORD /d "0" /f
-            	reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\MediaFoundationAggregator\{9CAC2D9B-E081-4AB7-8C3E-30D117BCEF93}" /v "EnableHold" /t REG_DWORD /d "0" /f
-            	reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\MediaFoundationAggregator\{9CAC2D9B-E081-4AB7-8C3E-30D117BCEF93}" /v "MatchAnyKeyword" /t REG_BINARY /d "0" /f
-            	reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\MediaFoundationAggregator\{FBDC4594-A4A9-5F04-AF86-7BD18A7938B9}" /v "Enabled" /t REG_DWORD /d "0" /f
-            	reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\MediaFoundationAggregator\{FBDC4594-A4A9-5F04-AF86-7BD18A7938B9}" /v "EnableHold" /t REG_DWORD /d "0" /f
-            	reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\MediaFoundationAggregator\{FBDC4594-A4A9-5F04-AF86-7BD18A7938B9}" /v "MatchAnyKeyword" /t REG_BINARY /d "0" /f
+        Write-Host "Configuring Diagnostics DiagTrack\Aggregation\ControlGroups\MediaFoundationAggregator...."
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\MediaFoundationAggregator\{206BA7A1-88E8-4ABB-B6B8-28937E82C72B}" /v "Enabled" /t REG_DWORD /d "0" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\MediaFoundationAggregator\{206BA7A1-88E8-4ABB-B6B8-28937E82C72B}" /v "EnableHold" /t REG_DWORD /d "0" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\MediaFoundationAggregator\{206BA7A1-88E8-4ABB-B6B8-28937E82C72B}" /v "MatchAnyKeyword" /t REG_BINARY /d "0" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\MediaFoundationAggregator\{8EFF71C4-CB3E-5664-86BF-7E15BD6F9FA4}" /v "Enabled" /t REG_DWORD /d "0" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\MediaFoundationAggregator\{8EFF71C4-CB3E-5664-86BF-7E15BD6F9FA4}" /v "EnableHold" /t REG_DWORD /d "0" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\MediaFoundationAggregator\{8EFF71C4-CB3E-5664-86BF-7E15BD6F9FA4}" /v "MatchAnyKeyword" /t REG_BINARY /d "0" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\MediaFoundationAggregator\{9CAC2D9B-E081-4AB7-8C3E-30D117BCEF93}" /v "Enabled" /t REG_DWORD /d "0" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\MediaFoundationAggregator\{9CAC2D9B-E081-4AB7-8C3E-30D117BCEF93}" /v "EnableHold" /t REG_DWORD /d "0" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\MediaFoundationAggregator\{9CAC2D9B-E081-4AB7-8C3E-30D117BCEF93}" /v "MatchAnyKeyword" /t REG_BINARY /d "0" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\MediaFoundationAggregator\{FBDC4594-A4A9-5F04-AF86-7BD18A7938B9}" /v "Enabled" /t REG_DWORD /d "0" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\MediaFoundationAggregator\{FBDC4594-A4A9-5F04-AF86-7BD18A7938B9}" /v "EnableHold" /t REG_DWORD /d "0" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\MediaFoundationAggregator\{FBDC4594-A4A9-5F04-AF86-7BD18A7938B9}" /v "MatchAnyKeyword" /t REG_BINARY /d "0" /f
 
-            	Write-Host "Configuring Diagnostics DiagTrack\Aggregation\ControlGroups\PwdlessAggregator...."
-            	reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\PwdlessAggregator\{fb3cd94d-95ef-5a73-b35c-6c78451095ef}" /v "Enabled" /t REG_DWORD /d "0" /f
-            	reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\PwdlessAggregator\{fb3cd94d-95ef-5a73-b35c-6c78451095ef}" /v "EnableHold" /t REG_DWORD /d "0" /f
-            	reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\PwdlessAggregator\{fb3cd94d-95ef-5a73-b35c-6c78451095ef}" /v "MatchAnyKeyword" /t REG_BINARY /d "0" /f
+        Write-Host "Configuring Diagnostics DiagTrack\Aggregation\ControlGroups\PwdlessAggregator...."
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\PwdlessAggregator\{fb3cd94d-95ef-5a73-b35c-6c78451095ef}" /v "Enabled" /t REG_DWORD /d "0" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\PwdlessAggregator\{fb3cd94d-95ef-5a73-b35c-6c78451095ef}" /v "EnableHold" /t REG_DWORD /d "0" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\PwdlessAggregator\{fb3cd94d-95ef-5a73-b35c-6c78451095ef}" /v "MatchAnyKeyword" /t REG_BINARY /d "0" /f
 
-            	Write-Host "Configuring Diagnostics DiagTrack\Aggregation\ControlGroups\UpdateHeartbeatScan...."
-            	reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdateHeartbeatScan\{025d2741-697b-5e0e-7e77-9a36140251f7}" /v "Enabled" /t REG_DWORD /d "0" /f
-            	reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdateHeartbeatScan\{025d2741-697b-5e0e-7e77-9a36140251f7}" /v "MatchAnyKeyword" /t REG_BINARY /d "0" /f
-            	reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdateHeartbeatScan\{2504bc27-0e8b-5fed-7a9f-d86972086285}" /v "Enabled" /t REG_DWORD /d "0" /f
-            	reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdateHeartbeatScan\{2504bc27-0e8b-5fed-7a9f-d86972086285}" /v "MatchAnyKeyword" /t REG_BINARY /d "0" /f
-            	reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdateHeartbeatScan\{46b13027-2dfd-46e1-832d-e41e2810e6e5}" /v "Enabled" /t REG_DWORD /d "0" /f
-            	reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdateHeartbeatScan\{46b13027-2dfd-46e1-832d-e41e2810e6e5}" /v "MatchAnyKeyword" /t REG_BINARY /d "0" /f
-            	reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdateHeartbeatScan\{59dd67cc-7ce1-52f8-cf74-fe8a257a2b6b}" /v "Enabled" /t REG_DWORD /d "0" /f
-            	reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdateHeartbeatScan\{59dd67cc-7ce1-52f8-cf74-fe8a257a2b6b}" /v "MatchAnyKeyword" /t REG_BINARY /d "0" /f
-            	reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdateHeartbeatScan\{6d925246-8771-5ba9-515d-62b322d5f992}" /v "Enabled" /t REG_DWORD /d "0" /f
-            	reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdateHeartbeatScan\{6d925246-8771-5ba9-515d-62b322d5f992}" /v "MatchAnyKeyword" /t REG_BINARY /d "0" /f
-            	reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdateHeartbeatScan\{a7116549-1568-584f-9d0b-06cd5de15555}" /v "Enabled" /t REG_DWORD /d "0" /f
-            	reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdateHeartbeatScan\{a7116549-1568-584f-9d0b-06cd5de15555}" /v "MatchAnyKeyword" /t REG_BINARY /d "0" /f
-            	reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdateHeartbeatScan\{a8b932c2-51ec-5c22-63fc-0115fd79b9e0}" /v "Enabled" /t REG_DWORD /d "0" /f
-            	reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdateHeartbeatScan\{a8b932c2-51ec-5c22-63fc-0115fd79b9e0}" /v "MatchAnyKeyword" /t REG_BINARY /d "0" /f
-            	reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdateHeartbeatScan\{cee50f59-e321-4691-9bb7-9b75494f6aab}" /v "Enabled" /t REG_DWORD /d "0" /f
-            	reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdateHeartbeatScan\{cee50f59-e321-4691-9bb7-9b75494f6aab}" /v "MatchAnyKeyword" /t REG_BINARY /d "0" /f
-            	reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdateHeartbeatScan\{d48679eb-8aa3-4138-be24-f1648C874e49}" /v "Enabled" /t REG_DWORD /d "0" /f
-            	reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdateHeartbeatScan\{d48679eb-8aa3-4138-be24-f1648C874e49}" /v "MatchAnyKeyword" /t REG_BINARY /d "0" /f
-            	reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdateHeartbeatScan\{da65932c-0b7f-51d8-8d86-a4e5ae55392b}" /v "Enabled" /t REG_DWORD /d "0" /f
-            	reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdateHeartbeatScan\{da65932c-0b7f-51d8-8d86-a4e5ae55392b}" /v "MatchAnyKeyword" /t REG_BINARY /d "0" /f
+        Write-Host "Configuring Diagnostics DiagTrack\Aggregation\ControlGroups\UpdateHeartbeatScan...."
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdateHeartbeatScan\{025d2741-697b-5e0e-7e77-9a36140251f7}" /v "Enabled" /t REG_DWORD /d "0" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdateHeartbeatScan\{025d2741-697b-5e0e-7e77-9a36140251f7}" /v "MatchAnyKeyword" /t REG_BINARY /d "0" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdateHeartbeatScan\{2504bc27-0e8b-5fed-7a9f-d86972086285}" /v "Enabled" /t REG_DWORD /d "0" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdateHeartbeatScan\{2504bc27-0e8b-5fed-7a9f-d86972086285}" /v "MatchAnyKeyword" /t REG_BINARY /d "0" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdateHeartbeatScan\{46b13027-2dfd-46e1-832d-e41e2810e6e5}" /v "Enabled" /t REG_DWORD /d "0" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdateHeartbeatScan\{46b13027-2dfd-46e1-832d-e41e2810e6e5}" /v "MatchAnyKeyword" /t REG_BINARY /d "0" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdateHeartbeatScan\{59dd67cc-7ce1-52f8-cf74-fe8a257a2b6b}" /v "Enabled" /t REG_DWORD /d "0" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdateHeartbeatScan\{59dd67cc-7ce1-52f8-cf74-fe8a257a2b6b}" /v "MatchAnyKeyword" /t REG_BINARY /d "0" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdateHeartbeatScan\{6d925246-8771-5ba9-515d-62b322d5f992}" /v "Enabled" /t REG_DWORD /d "0" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdateHeartbeatScan\{6d925246-8771-5ba9-515d-62b322d5f992}" /v "MatchAnyKeyword" /t REG_BINARY /d "0" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdateHeartbeatScan\{a7116549-1568-584f-9d0b-06cd5de15555}" /v "Enabled" /t REG_DWORD /d "0" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdateHeartbeatScan\{a7116549-1568-584f-9d0b-06cd5de15555}" /v "MatchAnyKeyword" /t REG_BINARY /d "0" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdateHeartbeatScan\{a8b932c2-51ec-5c22-63fc-0115fd79b9e0}" /v "Enabled" /t REG_DWORD /d "0" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdateHeartbeatScan\{a8b932c2-51ec-5c22-63fc-0115fd79b9e0}" /v "MatchAnyKeyword" /t REG_BINARY /d "0" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdateHeartbeatScan\{cee50f59-e321-4691-9bb7-9b75494f6aab}" /v "Enabled" /t REG_DWORD /d "0" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdateHeartbeatScan\{cee50f59-e321-4691-9bb7-9b75494f6aab}" /v "MatchAnyKeyword" /t REG_BINARY /d "0" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdateHeartbeatScan\{d48679eb-8aa3-4138-be24-f1648C874e49}" /v "Enabled" /t REG_DWORD /d "0" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdateHeartbeatScan\{d48679eb-8aa3-4138-be24-f1648C874e49}" /v "MatchAnyKeyword" /t REG_BINARY /d "0" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdateHeartbeatScan\{da65932c-0b7f-51d8-8d86-a4e5ae55392b}" /v "Enabled" /t REG_DWORD /d "0" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdateHeartbeatScan\{da65932c-0b7f-51d8-8d86-a4e5ae55392b}" /v "MatchAnyKeyword" /t REG_BINARY /d "0" /f
 
-            	Write-Host "Configuring Diagnostics DiagTrack\Aggregation\ControlGroups\UpdatePolicyScenarioReliabilityAggregator...."
-            	reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdatePolicyScenarioReliabilityAggregator\{025d2741-697b-5e0e-7e77-9a36140251f7}" /v "Enabled" /t REG_DWORD /d "0" /f
-            	reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdatePolicyScenarioReliabilityAggregator\{025d2741-697b-5e0e-7e77-9a36140251f7}" /v "MatchAnyKeyword" /t REG_BINARY /d "0" /f
-            	reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdatePolicyScenarioReliabilityAggregator\{59dd67cc-7ce1-52f8-cf74-fe8a257a2b6b}" /v "Enabled" /t REG_DWORD /d "0" /f
-            	reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdatePolicyScenarioReliabilityAggregator\{59dd67cc-7ce1-52f8-cf74-fe8a257a2b6b}" /v "MatchAnyKeyword" /t REG_BINARY /d "0" /f
-            	reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdatePolicyScenarioReliabilityAggregator\{a7116549-1568-584f-9d0b-06cd5de15555}" /v "Enabled" /t REG_DWORD /d "0" /f
-            	reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdatePolicyScenarioReliabilityAggregator\{a7116549-1568-584f-9d0b-06cd5de15555}" /v "MatchAnyKeyword" /t REG_BINARY /d "0" /f
-            	reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdatePolicyScenarioReliabilityAggregator\{a8b932c2-51ec-5c22-63fc-0115fd79b9e0}" /v "Enabled" /t REG_DWORD /d "0" /f
-            	reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdatePolicyScenarioReliabilityAggregator\{a8b932c2-51ec-5c22-63fc-0115fd79b9e0}" /v "MatchAnyKeyword" /t REG_BINARY /d "0" /f
-            	reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdatePolicyScenarioReliabilityAggregator\{e77a560c-3696-4ac0-911c-545ceca6be3c}" /v "Enabled" /t REG_DWORD /d "0" /f
-            	reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdatePolicyScenarioReliabilityAggregator\{e77a560c-3696-4ac0-911c-545ceca6be3c}" /v "MatchAnyKeyword" /t REG_BINARY /d "0" /f
+        Write-Host "Configuring Diagnostics DiagTrack\Aggregation\ControlGroups\UpdatePolicyScenarioReliabilityAggregator...."
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdatePolicyScenarioReliabilityAggregator\{025d2741-697b-5e0e-7e77-9a36140251f7}" /v "Enabled" /t REG_DWORD /d "0" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdatePolicyScenarioReliabilityAggregator\{025d2741-697b-5e0e-7e77-9a36140251f7}" /v "MatchAnyKeyword" /t REG_BINARY /d "0" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdatePolicyScenarioReliabilityAggregator\{59dd67cc-7ce1-52f8-cf74-fe8a257a2b6b}" /v "Enabled" /t REG_DWORD /d "0" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdatePolicyScenarioReliabilityAggregator\{59dd67cc-7ce1-52f8-cf74-fe8a257a2b6b}" /v "MatchAnyKeyword" /t REG_BINARY /d "0" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdatePolicyScenarioReliabilityAggregator\{a7116549-1568-584f-9d0b-06cd5de15555}" /v "Enabled" /t REG_DWORD /d "0" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdatePolicyScenarioReliabilityAggregator\{a7116549-1568-584f-9d0b-06cd5de15555}" /v "MatchAnyKeyword" /t REG_BINARY /d "0" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdatePolicyScenarioReliabilityAggregator\{a8b932c2-51ec-5c22-63fc-0115fd79b9e0}" /v "Enabled" /t REG_DWORD /d "0" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdatePolicyScenarioReliabilityAggregator\{a8b932c2-51ec-5c22-63fc-0115fd79b9e0}" /v "MatchAnyKeyword" /t REG_BINARY /d "0" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdatePolicyScenarioReliabilityAggregator\{e77a560c-3696-4ac0-911c-545ceca6be3c}" /v "Enabled" /t REG_DWORD /d "0" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdatePolicyScenarioReliabilityAggregator\{e77a560c-3696-4ac0-911c-545ceca6be3c}" /v "MatchAnyKeyword" /t REG_BINARY /d "0" /f
 
 
 
-            	Write-Host "Configuring Diagnostics DiagTrack\Aggregation\ControlGroups\UpdateReboot...."
-            	reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdateReboot\{18D6CBEB-1E21-500A-27E2-8BA2BEAC7C00}" /v "Enabled" /t REG_DWORD /d "0" /f
-            	reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdateReboot\{18D6CBEB-1E21-500A-27E2-8BA2BEAC7C00}" /v "MatchAnyKeyword" /t REG_BINARY /d "0" /f
+        Write-Host "Configuring Diagnostics DiagTrack\Aggregation\ControlGroups\UpdateReboot...."
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdateReboot\{18D6CBEB-1E21-500A-27E2-8BA2BEAC7C00}" /v "Enabled" /t REG_DWORD /d "0" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdateReboot\{18D6CBEB-1E21-500A-27E2-8BA2BEAC7C00}" /v "MatchAnyKeyword" /t REG_BINARY /d "0" /f
 
-            	reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdateReboot\{3D6120A6-0986-51C4-213A-E2975903051D}" /v "Enabled" /t REG_DWORD /d "0" /f
-            	reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdateReboot\{3D6120A6-0986-51C4-213A-E2975903051D}" /v "MatchAnyKeyword" /t REG_BINARY /d "0" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdateReboot\{3D6120A6-0986-51C4-213A-E2975903051D}" /v "Enabled" /t REG_DWORD /d "0" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdateReboot\{3D6120A6-0986-51C4-213A-E2975903051D}" /v "MatchAnyKeyword" /t REG_BINARY /d "0" /f
 
-            	reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdateReboot\{59DD67CC-7CE1-52F8-CF74-FE8A257A2B6B}" /v "Enabled" /t REG_DWORD /d "0" /f
-            	reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdateReboot\{59DD67CC-7CE1-52F8-CF74-FE8A257A2B6B}" /v "MatchAnyKeyword" /t REG_BINARY /d "0" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdateReboot\{59DD67CC-7CE1-52F8-CF74-FE8A257A2B6B}" /v "Enabled" /t REG_DWORD /d "0" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdateReboot\{59DD67CC-7CE1-52F8-CF74-FE8A257A2B6B}" /v "MatchAnyKeyword" /t REG_BINARY /d "0" /f
 
-            	reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdateReboot\{8BE48F34-1F58-4180-8C12-DBE6E6E71A81}" /v "Enabled" /t REG_DWORD /d "0" /f
-            	reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdateReboot\{8BE48F34-1F58-4180-8C12-DBE6E6E71A81}" /v "MatchAnyKeyword" /t REG_BINARY /d "0" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdateReboot\{8BE48F34-1F58-4180-8C12-DBE6E6E71A81}" /v "Enabled" /t REG_DWORD /d "0" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdateReboot\{8BE48F34-1F58-4180-8C12-DBE6E6E71A81}" /v "MatchAnyKeyword" /t REG_BINARY /d "0" /f
 
-            	reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdateReboot\{AC8D9176-9EB4-5047-9B60-1AABC45281B8}" /v "Enabled" /t REG_DWORD /d "0" /f
-            	reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdateReboot\{AC8D9176-9EB4-5047-9B60-1AABC45281B8}" /v "MatchAnyKeyword" /t REG_BINARY /d "0" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdateReboot\{AC8D9176-9EB4-5047-9B60-1AABC45281B8}" /v "Enabled" /t REG_DWORD /d "0" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdateReboot\{AC8D9176-9EB4-5047-9B60-1AABC45281B8}" /v "MatchAnyKeyword" /t REG_BINARY /d "0" /f
 
-            	reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdateReboot\{B39B8CEA-EAAA-5A74-5794-4948E222C663}" /v "Enabled" /t REG_DWORD /d "0" /f
-            	reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdateReboot\{B39B8CEA-EAAA-5A74-5794-4948E222C663}" /v "MatchAnyKeyword" /t REG_BINARY /d "0" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdateReboot\{B39B8CEA-EAAA-5A74-5794-4948E222C663}" /v "Enabled" /t REG_DWORD /d "0" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdateReboot\{B39B8CEA-EAAA-5A74-5794-4948E222C663}" /v "MatchAnyKeyword" /t REG_BINARY /d "0" /f
 
-            	reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdateReboot\{BBC9A2C9-EEED-58D4-9483-6C87118F9EC6}" /v "Enabled" /t REG_DWORD /d "0" /f
-            	reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdateReboot\{BBC9A2C9-EEED-58D4-9483-6C87118F9EC6}" /v "MatchAnyKeyword" /t REG_BINARY /d "0" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdateReboot\{BBC9A2C9-EEED-58D4-9483-6C87118F9EC6}" /v "Enabled" /t REG_DWORD /d "0" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdateReboot\{BBC9A2C9-EEED-58D4-9483-6C87118F9EC6}" /v "MatchAnyKeyword" /t REG_BINARY /d "0" /f
 
-            	reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdateReboot\{CEE50F59-E321-4691-9BB7-9B75494F6AAB}" /v "Enabled" /t REG_DWORD /d "0" /f
-            	reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdateReboot\{CEE50F59-E321-4691-9BB7-9B75494F6AAB}" /v "MatchAnyKeyword" /t REG_BINARY /d "0" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdateReboot\{CEE50F59-E321-4691-9BB7-9B75494F6AAB}" /v "Enabled" /t REG_DWORD /d "0" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdateReboot\{CEE50F59-E321-4691-9BB7-9B75494F6AAB}" /v "MatchAnyKeyword" /t REG_BINARY /d "0" /f
 
-            	reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdateReboot\{D059A021-6947-44FB-976A-B18C9B73D1D8}" /v "Enabled" /t REG_DWORD /d "0" /f
-            	reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdateReboot\{D059A021-6947-44FB-976A-B18C9B73D1D8}" /v "MatchAnyKeyword" /t REG_BINARY /d "0" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdateReboot\{D059A021-6947-44FB-976A-B18C9B73D1D8}" /v "Enabled" /t REG_DWORD /d "0" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdateReboot\{D059A021-6947-44FB-976A-B18C9B73D1D8}" /v "MatchAnyKeyword" /t REG_BINARY /d "0" /f
 
-            	Write-Host "Configuring Diagnostics DiagTrack\Aggregation\ControlGroups\UusCoreHealthAggregator...."
-            	reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UusCoreHealthAggregator\{b6acef34-fab6-5909-6b6b-b1c2cc84057f}" /v "Enabled" /t REG_DWORD /d "0" /f
-            	reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UusCoreHealthAggregator\{b6acef34-fab6-5909-6b6b-b1c2cc84057f}" /v "MatchAnyKeyword" /t REG_BINARY /d "0" /f
+        Write-Host "Configuring Diagnostics DiagTrack\Aggregation\ControlGroups\UusCoreHealthAggregator...."
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UusCoreHealthAggregator\{b6acef34-fab6-5909-6b6b-b1c2cc84057f}" /v "Enabled" /t REG_DWORD /d "0" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UusCoreHealthAggregator\{b6acef34-fab6-5909-6b6b-b1c2cc84057f}" /v "MatchAnyKeyword" /t REG_BINARY /d "0" /f
 
-            	Write-Host "Configuring Diagnostics DiagTrack\Aggregation\ControlGroups\UusFailover...."
-            	reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UusFailover\{1377561d-9312-452c-ad13-c4a1c9c906e0}" /v "Enabled" /t REG_DWORD /d "0" /f
-            	reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UusFailover\{1377561d-9312-452c-ad13-c4a1c9c906e0}" /v "MatchAnyKeyword" /t REG_BINARY /d "0" /f
+        Write-Host "Configuring Diagnostics DiagTrack\Aggregation\ControlGroups\UusFailover...."
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UusFailover\{1377561d-9312-452c-ad13-c4a1c9c906e0}" /v "Enabled" /t REG_DWORD /d "0" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UusFailover\{1377561d-9312-452c-ad13-c4a1c9c906e0}" /v "MatchAnyKeyword" /t REG_BINARY /d "0" /f
 
-            	reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UusFailover\{1a1dfad0-6d37-5521-1d72-1f87dd20423c}" /v "Enabled" /t REG_DWORD /d "0" /f
-            	reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UusFailover\{1a1dfad0-6d37-5521-1d72-1f87dd20423c}" /v "MatchAnyKeyword" /t REG_BINARY /d "0" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UusFailover\{1a1dfad0-6d37-5521-1d72-1f87dd20423c}" /v "Enabled" /t REG_DWORD /d "0" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UusFailover\{1a1dfad0-6d37-5521-1d72-1f87dd20423c}" /v "MatchAnyKeyword" /t REG_BINARY /d "0" /f
 
-            	reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UusFailover\{3E0D88DE-AE5C-438A-BB1C-C2E627F8AECB}" /v "Enabled" /t REG_DWORD /d "0" /f
-            	reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UusFailover\{3E0D88DE-AE5C-438A-BB1C-C2E627F8AECB}" /v "MatchAnyKeyword" /t REG_BINARY /d "0" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UusFailover\{3E0D88DE-AE5C-438A-BB1C-C2E627F8AECB}" /v "Enabled" /t REG_DWORD /d "0" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UusFailover\{3E0D88DE-AE5C-438A-BB1C-C2E627F8AECB}" /v "MatchAnyKeyword" /t REG_BINARY /d "0" /f
 
-            	reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UusFailover\{76AD4308-DF7C-5F43-E668-FCEA4FA1179D}" /v "Enabled" /t REG_DWORD /d "0" /f
-            	reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UusFailover\{76AD4308-DF7C-5F43-E668-FCEA4FA1179D}" /v "MatchAnyKeyword" /t REG_BINARY /d "0" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UusFailover\{76AD4308-DF7C-5F43-E668-FCEA4FA1179D}" /v "Enabled" /t REG_DWORD /d "0" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UusFailover\{76AD4308-DF7C-5F43-E668-FCEA4FA1179D}" /v "MatchAnyKeyword" /t REG_BINARY /d "0" /f
 
-            	reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UusFailover\{ad031b74-9ced-5a36-5961-956127af5b77}" /v "Enabled" /t REG_DWORD /d "0" /f
-            	reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UusFailover\{ad031b74-9ced-5a36-5961-956127af5b77}" /v "MatchAnyKeyword" /t REG_BINARY /d "0" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UusFailover\{ad031b74-9ced-5a36-5961-956127af5b77}" /v "Enabled" /t REG_DWORD /d "0" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UusFailover\{ad031b74-9ced-5a36-5961-956127af5b77}" /v "MatchAnyKeyword" /t REG_BINARY /d "0" /f
 
-            	reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UusFailover\{b6acef34-fab6-5909-6b6b-b1c2cc84057f}" /v "Enabled" /t REG_DWORD /d "0" /f
-            	reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UusFailover\{b6acef34-fab6-5909-6b6b-b1c2cc84057f}" /v "MatchAnyKeyword" /t REG_BINARY /d "0" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UusFailover\{b6acef34-fab6-5909-6b6b-b1c2cc84057f}" /v "Enabled" /t REG_DWORD /d "0" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UusFailover\{b6acef34-fab6-5909-6b6b-b1c2cc84057f}" /v "MatchAnyKeyword" /t REG_BINARY /d "0" /f
 
-            	reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UusFailover\{B7AFA6AF-AAAB-4F50-B7DC-B61D4DDBE34F}" /v "Enabled" /t REG_DWORD /d "0" /f
-            	reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UusFailover\{B7AFA6AF-AAAB-4F50-B7DC-B61D4DDBE34F}" /v "MatchAnyKeyword" /t REG_BINARY /d "0" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UusFailover\{B7AFA6AF-AAAB-4F50-B7DC-B61D4DDBE34F}" /v "Enabled" /t REG_DWORD /d "0" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UusFailover\{B7AFA6AF-AAAB-4F50-B7DC-B61D4DDBE34F}" /v "MatchAnyKeyword" /t REG_BINARY /d "0" /f
 
-            	reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UusFailover\{D1094A14-063E-7A21-A301-F2FE3BA23F62}" /v "Enabled" /t REG_DWORD /d "0" /f
-            	reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UusFailover\{D1094A14-063E-7A21-A301-F2FE3BA23F62}" /v "MatchAnyKeyword" /t REG_BINARY /d "0" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UusFailover\{D1094A14-063E-7A21-A301-F2FE3BA23F62}" /v "Enabled" /t REG_DWORD /d "0" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UusFailover\{D1094A14-063E-7A21-A301-F2FE3BA23F62}" /v "MatchAnyKeyword" /t REG_BINARY /d "0" /f
 
-            	reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UusFailover\{EC4BA041-1DFE-5F76-EF6D-0251DA19D178}" /v "Enabled" /t REG_DWORD /d "0" /f
-            	reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UusFailover\{EC4BA041-1DFE-5F76-EF6D-0251DA19D178}" /v "MatchAnyKeyword" /t REG_BINARY /d "0" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UusFailover\{EC4BA041-1DFE-5F76-EF6D-0251DA19D178}" /v "Enabled" /t REG_DWORD /d "0" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UusFailover\{EC4BA041-1DFE-5F76-EF6D-0251DA19D178}" /v "MatchAnyKeyword" /t REG_BINARY /d "0" /f
 
   		Write-Host "Configuring Diagnostics DiagTrack\Aggregation\Host...."
 		reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\Host\0" /v "Status" /t REG_DWORD /d "0" /f
@@ -660,7 +660,7 @@ public class PowerManagement {
 
 		Write-Host "Configuring Diagnostics DiagTrack\ETWEncryptionKey....."
 		reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\ETWEncryptionKey" /v "CurrentUtcCertETag" /t REG_SZ /d "" /f
-        	reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\ETWEncryptionKey" /v "ETWEncryptionCert" /t REG_DWORD /d 0 /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\ETWEncryptionKey" /v "ETWEncryptionCert" /t REG_DWORD /d 0 /f
 
 		Write-Host "Configuring Diagnostics DiagTrack\EventMonitors...."
 		reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\EventMonitors\Microsoft.Windows.Sentinels.CostDeferred_0" /v "MonitorSn" /t REG_DWORD /d 0 /f
@@ -886,7 +886,7 @@ public class PowerManagement {
 
 		Write-Host "Configuring Diagnostics DiagTrack\ProviderControl...."
 		reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\ProviderControl" /v "DiagnosticsAndFeedbackSettingsApp" /t REG_BINARY /d 0 /f
-        	reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\ProviderControl" /v "DiagnosticsAndFeedbackSettingsApp" /t REG_MULTI_SZ /d "" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\ProviderControl" /v "DiagnosticsAndFeedbackSettingsApp" /t REG_MULTI_SZ /d "" /f
 
 
 		Write-Host "Configuring Diagnostics DiagTrack\RegionalSettings...."
@@ -906,7 +906,7 @@ public class PowerManagement {
 		reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\SettingsRequests" /v "LastTelSettingsBranchName" /t REG_SZ /d "" /f
 
 
-        	Write-Host "Configuring Diagnostics P-ARIA Telemetry....."
+        Write-Host "Configuring Diagnostics P-ARIA Telemetry....."
 		reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\SettingsRequests\telemetry.ASM-WindowsDefault" /v "SettingsType" /t REG_DWORD /d 0 /f
 		reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\SettingsRequests\telemetry.ASM-WindowsDefault" /v "SettingsPriority" /t REG_DWORD /d 0 /f
 		reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\SettingsRequests\telemetry.ASM-WindowsDefault" /v "SettingsRegistrationType" /t REG_DWORD /d 0 /f
@@ -1468,7 +1468,7 @@ public class PowerManagement {
 		reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Tenants\P-ARIA" /v "DailyUploadQuotaInBytes" /t REG_DWORD /d 0 /f
 		reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Tenants\P-ARIA" /v "DiskSizeInBytes" /t REG_DWORD /d 0 /f
 		reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Tenants\P-ARIA" /v "LastNormalUploadTime" /t REG_QWORD /d 0 /f
-        	reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Tenants\P-ARIA" /v "LastRealtimeUploadTime" /t REG_QWORD /d 0 /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Tenants\P-ARIA" /v "LastRealtimeUploadTime" /t REG_QWORD /d 0 /f
 
 
 		Write-Host "Configuring Diagnostics DiagTrack\Tenants\P-ARIA...."
@@ -1566,6 +1566,92 @@ public class PowerManagement {
 
 		Write-Host "Configuring Diagnostics DiagTrack\TriggerListener...."
 		reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\TriggerListener" /v "MatchEngineBufferSize" /t REG_DWORD /d 0 /f
+
+        Write-Host "Configuring Windows Update to delay Feature Update to 365 days and security update to 20 days....."
+        reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate" /v "DeferFeatureUpdatesPeriodInDays" /t REG_DWORD /d "365" /f
+        reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate" /v "DeferFeatureUpdates" /t REG_DWORD /d "1" /f
+        reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate" /v "BranchReadinessLevel" /t REG_DWORD /d "20" /f
+        reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate" /v "DeferQualityUpdates" /t REG_DWORD /d "1" /f
+        reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate" /v "DeferQualityUpdatesPeriodInDays" /t REG_DWORD /d "20" /f
+        reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate" /v "TargetReleaseVersion" /t REG_DWORD /d "1" /f
+        reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate" /v "ProductVersion" /t REG_SZ /d "Windows 11" /f
+        reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate" /v "TargetReleaseVersionInfo" /t REG_SZ /d "23H2" /f
+
+		Write-Host "Configuring removed apps from returning during an update...."
+
+        # Common Apps / Client editions all
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Appx\AppxAllUserStore\Deprovisioned\Microsoft.BingNews_8wekyb3d8bbwe" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Appx\AppxAllUserStore\Deprovisioned\Microsoft.BingWeather_8wekyb3d8bbwe" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Appx\AppxAllUserStore\Deprovisioned\Microsoft.WindowsStore_8wekyb3d8bbwe" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Appx\AppxAllUserStore\Deprovisioned\Microsoft.StorePurchaseApp_8wekyb3d8bbwe" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Appx\AppxAllUserStore\Deprovisioned\Microsoft.SecHealthUI_8wekyb3d8bbwe" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Appx\AppxAllUserStore\Deprovisioned\Microsoft.VCLibs.140.00_8wekyb3d8bbwe" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Appx\AppxAllUserStore\Deprovisioned\Microsoft.Windows.Photos_8wekyb3d8bbwe" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Appx\AppxAllUserStore\Deprovisioned\Microsoft.WindowsCamera_8wekyb3d8bbwe" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Appx\AppxAllUserStore\Deprovisioned\Microsoft.WindowsNotepad_8wekyb3d8bbwe" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Appx\AppxAllUserStore\Deprovisioned\Microsoft.Paint_8wekyb3d8bbwe" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Appx\AppxAllUserStore\Deprovisioned\Microsoft.WindowsTerminal_8wekyb3d8bbwe" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Appx\AppxAllUserStore\Deprovisioned\Microsoft.DesktopAppInstaller_8wekyb3d8bbwe" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Appx\AppxAllUserStore\Deprovisioned\MicrosoftWindows.Client.WebExperience_cw5n1h2txyewy" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Appx\AppxAllUserStore\Deprovisioned\Microsoft.WindowsAlarms_8wekyb3d8bbwe" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Appx\AppxAllUserStore\Deprovisioned\Microsoft.WindowsCalculator_8wekyb3d8bbwe" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Appx\AppxAllUserStore\Deprovisioned\Microsoft.WindowsMaps_8wekyb3d8bbwe" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Appx\AppxAllUserStore\Deprovisioned\Microsoft.MicrosoftStickyNotes_8wekyb3d8bbwe" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Appx\AppxAllUserStore\Deprovisioned\Microsoft.ScreenSketch_8wekyb3d8bbwe" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Appx\AppxAllUserStore\Deprovisioned\microsoft.windowscommunicationsapps_8wekyb3d8bbwe" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Appx\AppxAllUserStore\Deprovisioned\Microsoft.People_8wekyb3d8bbwe" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Appx\AppxAllUserStore\Deprovisioned\Microsoft.MicrosoftSolitaireCollection_8wekyb3d8bbwe" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Appx\AppxAllUserStore\Deprovisioned\Microsoft.MicrosoftOfficeHub_8wekyb3d8bbwe" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Appx\AppxAllUserStore\Deprovisioned\Microsoft.WindowsFeedbackHub_8wekyb3d8bbwe" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Appx\AppxAllUserStore\Deprovisioned\Microsoft.GetHelp_8wekyb3d8bbwe" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Appx\AppxAllUserStore\Deprovisioned\Microsoft.Getstarted_8wekyb3d8bbwe" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Appx\AppxAllUserStore\Deprovisioned\Microsoft.Todos_8wekyb3d8bbwe" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Appx\AppxAllUserStore\Deprovisioned\Microsoft.XboxSpeechToTextOverlay_8wekyb3d8bbwe" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Appx\AppxAllUserStore\Deprovisioned\Microsoft.XboxGameOverlay_8wekyb3d8bbwe" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Appx\AppxAllUserStore\Deprovisioned\Microsoft.XboxIdentityProvider_8wekyb3d8bbwe" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Appx\AppxAllUserStore\Deprovisioned\Microsoft.PowerAutomateDesktop_8wekyb3d8bbwe" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Appx\AppxAllUserStore\Deprovisioned\Microsoft.549981C3F5F10_8wekyb3d8bbwe" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Appx\AppxAllUserStore\Deprovisioned\MicrosoftCorporationII.QuickAssist_8wekyb3d8bbwe" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Appx\AppxAllUserStore\Deprovisioned\MicrosoftCorporationII.MicrosoftFamily_8wekyb3d8bbwe" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Appx\AppxAllUserStore\Deprovisioned\Microsoft.OutlookForWindows_8wekyb3d8bbwe" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Appx\AppxAllUserStore\Deprovisioned\MicrosoftTeams_8wekyb3d8bbwe" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Appx\AppxAllUserStore\Deprovisioned\Microsoft.Windows.DevHome_8wekyb3d8bbwe" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Appx\AppxAllUserStore\Deprovisioned\Microsoft.BingSearch_8wekyb3d8bbwe" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Appx\AppxAllUserStore\Deprovisioned\Microsoft.ApplicationCompatibilityEnhancements_8wekyb3d8bbwe" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Appx\AppxAllUserStore\Deprovisioned\MicrosoftWindows.CrossDevice_cw5n1h2txyewy" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Appx\AppxAllUserStore\Deprovisioned\MSTeams_8wekyb3d8bbwe" /f
+
+        # Media Apps / Client non-N editions
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Appx\AppxAllUserStore\Deprovisioned\Microsoft.ZuneMusic_8wekyb3d8bbwe" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Appx\AppxAllUserStore\Deprovisioned\Microsoft.ZuneVideo_8wekyb3d8bbwe" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Appx\AppxAllUserStore\Deprovisioned\Microsoft.YourPhone_8wekyb3d8bbwe" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Appx\AppxAllUserStore\Deprovisioned\Microsoft.WindowsSoundRecorder_8wekyb3d8bbwe" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Appx\AppxAllUserStore\Deprovisioned\Microsoft.GamingApp_8wekyb3d8bbwe" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Appx\AppxAllUserStore\Deprovisioned\Microsoft.XboxGamingOverlay_8wekyb3d8bbwe" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Appx\AppxAllUserStore\Deprovisioned\Microsoft.Xbox.TCUI_8wekyb3d8bbwe" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Appx\AppxAllUserStore\Deprovisioned\Clipchamp.Clipchamp_yxz26nhyzhsrt" /f
+
+        # Media Codecs / Client non-N editions, Team edition
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Appx\AppxAllUserStore\Deprovisioned\Microsoft.WebMediaExtensions_8wekyb3d8bbwe" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Appx\AppxAllUserStore\Deprovisioned\Microsoft.RawImageExtension_8wekyb3d8bbwe" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Appx\AppxAllUserStore\Deprovisioned\Microsoft.HEIFImageExtension_8wekyb3d8bbwe" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Appx\AppxAllUserStore\Deprovisioned\Microsoft.HEVCVideoExtension_8wekyb3d8bbwe" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Appx\AppxAllUserStore\Deprovisioned\Microsoft.VP9VideoExtensions_8wekyb3d8bbwe" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Appx\AppxAllUserStore\Deprovisioned\Microsoft.WebpImageExtension_8wekyb3d8bbwe" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Appx\AppxAllUserStore\Deprovisioned\Microsoft.DolbyAudioExtensions_8wekyb3d8bbwe" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Appx\AppxAllUserStore\Deprovisioned\Microsoft.AVCEncoderVideoExtension_8wekyb3d8bbwe" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Appx\AppxAllUserStore\Deprovisioned\Microsoft.MPEG2VideoExtension_8wekyb3d8bbwe" /f
+
+        # Surface Hub Apps / Team edition
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Appx\AppxAllUserStore\Deprovisioned\Microsoft.Whiteboard_8wekyb3d8bbwe" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Appx\AppxAllUserStore\Deprovisioned\microsoft.microsoftskydrive_8wekyb3d8bbwe" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Appx\AppxAllUserStore\Deprovisioned\Microsoft.MicrosoftTeamsforSurfaceHub_8wekyb3d8bbwe" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Appx\AppxAllUserStore\Deprovisioned\MicrosoftCorporationII.MailforSurfaceHub_8wekyb3d8bbwe" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Appx\AppxAllUserStore\Deprovisioned\Microsoft.MicrosoftPowerBIForWindows_8wekyb3d8bbwe" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Appx\AppxAllUserStore\Deprovisioned\Microsoft.SkypeApp_kzf8qxf38zg5c" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Appx\AppxAllUserStore\Deprovisioned\Microsoft.Office.Excel_8wekyb3d8bbwe" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Appx\AppxAllUserStore\Deprovisioned\Microsoft.Office.PowerPoint_8wekyb3d8bbwe" /f
+        reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Appx\AppxAllUserStore\Deprovisioned\Microsoft.Office.Word_8wekyb3d8bbwe" /f
 
 		Write-Host "Changing theme to dark. This only works on Activated Windows"
 		reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "AppsUseLightTheme" /t REG_DWORD /d 0 /f
